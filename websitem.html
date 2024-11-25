@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malware Presentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            background: #1e1e2f;
+        }
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            transition: all 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 20px;
+        }
+        .active {
+            left: 0;
+        }
+        .prev {
+            left: -100%;
+        }
+        h1, h2 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        p {
+            max-width: 700px;
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 0 auto 20px;
+        }
+        img {
+            max-width: 60%;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 1em;
+            color: #ddd;
+        }
+        .navigation {
+            position: absolute;
+            top: 50%;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            transform: translateY(-50%);
+        }
+        .arrow {
+            font-size: 2em;
+            color: white;
+            cursor: pointer;
+            padding: 10px 20px;
+            user-select: none;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+        }
+        .arrow:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Slide 1: Introduction -->
+        <div class="slide active" style="background: linear-gradient(135deg, #4e54c8, #8f94fb);">
+            <h1>Malware Presentation</h1>
+            <p>Welcome to our presentation on malware. We'll discuss its definition, examples like ILOVEYOU and Koobface, and how to protect yourself.</p>
+            <img src="https://www.tarlogic.com/wp-content/uploads/2024/02/Tipos-de-malware.webp">
+        </div>
+
+        <!-- Slide 2: What is Malware -->
+        <div class="slide" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">
+            <h1>What is Malware?</h1>
+            <p>Malware is malicious software that harms your computer. Its goals include stealing information, damaging systems, or scamming users.</p>
+            <p>Examples: Viruses, worms, Trojan horses.</p>
+            <img src="https://signal.avg.com/hs-fs/hubfs/Blog_Content/Avg/Signal/AVG%20Signal%20Images/what_is_malware_refresh_signal/What-is-Malware-01.png?width=1321&height=601&name=What-is-Malware-01.png" alt="Malware Illustration">
+        </div>
+
+        <!-- Slide 3: ILOVEYOU Virus -->
+        <div class="slide" style="background: linear-gradient(135deg, #ff758c, #ff7eb3);">
+            <h1>ILOVEYOU Virus (2000)</h1>
+            <p>The ILOVEYOU virus spread through email attachments and caused billions of dollars in damages worldwide.</p>
+            <p>Impact: Crashed computers, deleted files, and spread globally in hours.</p>
+            <img src="https://media.cnn.com/api/v1/images/stellar/prod/200402153041-iloveyou-virus-2000.jpg?q=w_1110,c_fill/f_webp" alt="ILOVEYOU Virus">
+        </div>
+
+        <!-- Slide 4: Koobface Worm -->
+        <div class="slide" style="background: linear-gradient(135deg, #ff9a9e, #fecfef);">
+            <h1>Koobface Worm (2008)</h1>
+            <p>The Koobface worm spread through fake Facebook messages with malicious links. It targeted user data and promoted fake antivirus software.</p>
+            <p>Impact: Slower spread but financially scammed users worldwide.</p>
+            <img src="https://scontent.fdiy1-2.fna.fbcdn.net/v/t39.30808-6/467713925_10160540652178663_1679938689876194717_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=0b6b33&_nc_ohc=B3AkkqkYnm8Q7kNvgHN31x2&_nc_zt=23&_nc_ht=scontent.fdiy1-2.fna&_nc_gid=AmLOQZp6ETy_3VYFKi8OS6d&oh=00_AYA7OFdfPcvIj8GkToGrrVbHRmXo30RJ5TsoDlXrbuTKOg&oe=67496E4D" alt="Koobface Worm">
+        </div>
+
+        <!-- Slide 5: Comparison -->
+        <div class="slide" style="background: linear-gradient(135deg, #a18cd1, #fbc2eb);">
+            <h1>Comparison: ILOVEYOU vs Koobface</h1>
+            <p>ILOVEYOU spread faster and caused more direct damage, while Koobface was slower but focused on financial scams and data theft.</p>
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRg3JLo3oKPZha4q1Nx1OL56-6Sfbqrtki0NP9MEtaLSByAhmAjsIud4kLMCSELaHkgoxLrFLG-GxPA9kkmMpTvxxoi240OXax-Iygc__T9CXoeMvVbCJ97Wn8bXWhmaZ2fW7akG6Y3Emv/s728-rw-e365/40th+anniversary+of+the+computer+virus+%2521.gif" alt="Comparison Chart">
+        </div>
+
+        <!-- Slide 6: Protection -->
+        <div class="slide" style="background: linear-gradient(135deg, #f4c4f3, #fc67fa);">
+            <h1>How to Protect Yourself</h1>
+            <p>Follow these steps to stay safe:</p>
+            <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
+                <li>Do not open unknown files or links.</li>
+                <li>Use updated antivirus software.</li>
+                <li>Avoid suspicious websites and programs.</li>
+            </ul>
+        </div>
+
+        <!-- Navigation -->
+        <div class="navigation">
+            <div class="arrow prev-arrow">&#8592;</div>
+            <div class="arrow next-arrow">&#8594;</div>
+        </div>
+
+        <footer>
+            <p>Created by Rumet Asan</p>
+        </footer>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let currentIndex = 0;
+
+        const showSlide = (index) => {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active', 'prev');
+                if (i === index) {
+                    slide.classList.add('active');
+                } else if (i === (index - 1 + slides.length) % slides.length) {
+                    slide.classList.add('prev');
+                }
+            });
+        };
+
+        const nextSlide = () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        };
+
+        const prevSlide = () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+        };
+
+        document.querySelector('.next-arrow').addEventListener('click', nextSlide);
+        document.querySelector('.prev-arrow').addEventListener('click', prevSlide);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+    </script>
+</body>
+</html>
